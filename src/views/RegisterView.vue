@@ -1,6 +1,6 @@
 <template>
   <main>
-    <form @submit.prevent="register">
+    <form @submit.prevent="register" class="register-form">
       <h1>Register</h1>
       <input v-model="email" type="email" placeholder="Email Address" />
       <input v-model="password" type="password" placeholder="Password" />
@@ -34,3 +34,31 @@ const register = () => {
   alert('Usuario registrado correctamente.');
 };
 </script>
+
+<style scoped>
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+</style>
